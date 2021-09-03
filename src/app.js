@@ -63,7 +63,7 @@ class App{
             <div class="head" style="font-size: 1.6rem">天赋抽卡</div>
             <button id="random" class="mainbtn" style="top: 50%;">10连抽！</button>
             <ul id="talents" class="selectlist"></ul>
-            <button id="next" class="mainbtn" style="top:auto; bottom:0.1em">请选择30个</button>
+            <button id="next" class="mainbtn" style="top:auto; bottom:0.1em">请选择任意个</button>
         </div>
         `);
 
@@ -292,7 +292,7 @@ class App{
                 <li><span>享年：</span>3岁 早夭</li>
                 <li><span>快乐：</span>3级 不太幸福的人生</li>
             </ul>
-            <div class="head" style="top:auto; bottom:35%">天赋，你可以选一个，下辈子还能抽到</div>
+            <div class="head" style="top:auto; bottom:35%">天赋，你可以选任意个，下辈子还能抽到</div>
             <ul id="talents" class="selectlist" style="top:calc(65% + 0.5rem); bottom:8rem">
                 <li class="grade2b">黑幕（面试一定成功）</li>
             </ul>
@@ -379,7 +379,7 @@ class App{
                             if(li.hasClass('selected')) {
                                 this.#selectedExtendTalent = null;
                                 li.removeClass('selected');
-                            } else if(this.#selectedExtendTalent != null) {
+                            } else if(this.#selectedExtendTalent == -1) {
                                 this.hint('只能继承一个天赋');
                                 return;
                             } else {

@@ -85,7 +85,7 @@ class App{
                                 li.removeClass('selected')
                                 this.#talentSelected.delete(talent);
                             } else {
-                                if(this.#talentSelected.size==0) {
+                                if(this.#talentSelected.size==-1) {
                                     this.hint('不能选0个天赋');
                                     return;
                                 }
@@ -113,7 +113,7 @@ class App{
         talentPage
             .find('#next')
             .click(()=>{
-                if(this.#talentSelected.size==0) {
+                if(this.#talentSelected.size==-1) {
                     this.hint('不能选0个天赋');
                     return;
                 }

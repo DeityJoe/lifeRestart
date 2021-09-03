@@ -117,7 +117,7 @@ class App{
                     this.hint('不能选0个天赋');
                     return;
                 }
-                this.#totalMax = 20 + this.#life.getTalentAllocationAddition(Array.from(this.#talentSelected).map(({id})=>id));
+                this.#totalMax = 400;
                 this.switch('property');
             })
 
